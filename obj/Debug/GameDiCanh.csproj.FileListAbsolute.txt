@@ -1,0 +1,11 @@
+E:\Data\WinForm\GameDiCanh\bin\Debug\GameDiCanh.exe.config
+E:\Data\WinForm\GameDiCanh\bin\Debug\GameDiCanh.exe
+E:\Data\WinForm\GameDiCanh\bin\Debug\GameDiCanh.pdb
+E:\Data\WinForm\GameDiCanh\obj\Debug\GameDiCanh.csproj.AssemblyReference.cache
+E:\Data\WinForm\GameDiCanh\obj\Debug\GameDiCanh.Properties.Resources.resources
+E:\Data\WinForm\GameDiCanh\obj\Debug\GameDiCanh.csproj.GenerateResource.cache
+E:\Data\WinForm\GameDiCanh\obj\Debug\GameDiCanh.csproj.CoreCompileInputs.cache
+E:\Data\WinForm\GameDiCanh\obj\Debug\GameDiCanh.exe
+E:\Data\WinForm\GameDiCanh\obj\Debug\GameDiCanh.pdb
+E:\Data\WinForm\GameDiCanh\obj\Debug\GameDiCanh.Menu.resources
+E:\Data\WinForm\GameDiCanh\obj\Debug\GameDiCanh.StageDemo.resources
