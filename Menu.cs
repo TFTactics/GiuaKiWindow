@@ -41,28 +41,59 @@ namespace GameDiCanh
 
         public void Setting()
         {
-            CheckBox NhacNen = new CheckBox();
-            NhacNen.Text = "Nhac Nen";
-            NhacNen.Location = new Point(206, 61);
-            NhacNen.Font = new Font("Snap ITC", 14);
-            NhacNen.AutoSize = true;
+            CheckBox NhacNen = new CheckBox() 
+            {
+                Height = 50,
+                Width = 180,
+                BackColor = Color.FromArgb(48, 59, 57),
+                ForeColor = Color.FromArgb(239, 141, 84),
+                FlatStyle = FlatStyle.Popup
+            };
+            NhacNen.Text = "SOUND TRACK";
+            NhacNen.Location = new Point(206, 60);
+            NhacNen.Font = new Font("Manaspace", 14);
             this.Controls.Add(NhacNen);
 
-            CheckBox NhacHieuUng = new CheckBox();
+            CheckBox NhacHieuUng = new CheckBox()
+            {
+                Height = 50,
+                Width = 100,
+                TextAlign = ContentAlignment.MiddleCenter,
+                BackColor = Color.FromArgb(48, 59, 57),
+                ForeColor = Color.FromArgb(239, 141, 84),
+                FlatStyle = FlatStyle.Popup
+
+            };
             NhacHieuUng.Text = "SFX";
-            NhacHieuUng.Location = new Point(206, 137);
-            NhacHieuUng.Font = new Font("Snap ITC", 14);
-            NhacHieuUng.AutoSize = true;
+            NhacHieuUng.Location = new Point(400, 60);
+            NhacHieuUng.Font = new Font("Manaspace", 14);
             this.Controls.Add(NhacHieuUng);
 
-            Button QuayLai = new Button();
+            Button QuayLai = new Button() { 
+                AutoSize = true,
+                Height = 50,
+                Width = 100,
+                BackColor = Color.FromArgb(48, 59, 57),
+                ForeColor = Color.FromArgb(239, 141, 84),
+                FlatStyle = FlatStyle.Popup
+            };
             QuayLai.Text = "RETURN";
-            QuayLai.Location = new Point(206, 268);
+            QuayLai.Font = new Font("Manaspace", 14);
+            QuayLai.Location = new Point(206, 150);
             this.Controls.Add(QuayLai);
 
-            Button Reset = new Button();
+            Button Reset = new Button() {
+                AutoSize = true,
+                Height = 50,
+                Width = 100,
+                BackColor = Color.FromArgb(48, 59, 57),
+                ForeColor = Color.FromArgb(239, 141, 84),
+                FlatStyle = FlatStyle.Popup
+
+            };
             Reset.Text = "RESET";
-            Reset.Location = new Point(206, 312);
+            Reset.Font = new Font("Manaspace", 14);
+            Reset.Location = new Point(206, 210);
             this.Controls.Add(Reset);
 
             QuayLai.Click += (s, e) =>
@@ -75,6 +106,11 @@ namespace GameDiCanh
                 btnExit.Show();
                 btnSetting.Show();
             };
+        }
+
+        private void btnExit_MouseEnter(object sender, EventArgs e)
+        {
+     
         }
     }
 }
