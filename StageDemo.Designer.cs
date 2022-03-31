@@ -34,8 +34,10 @@ namespace GameDiCanh
             this.player = new System.Windows.Forms.PictureBox();
             this.MyTimer = new System.Windows.Forms.Timer(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.mechaBot = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.player)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mechaBot)).BeginInit();
             this.SuspendLayout();
             // 
             // player
@@ -62,11 +64,21 @@ namespace GameDiCanh
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Tag = "Ground";
             // 
+            // mechaBot
+            // 
+            this.mechaBot.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.mechaBot, "mechaBot");
+            this.mechaBot.Image = global::GameDiCanh.Properties.Resources.EnemyMechaRobot;
+            this.mechaBot.Name = "mechaBot";
+            this.mechaBot.TabStop = false;
+            this.mechaBot.Tag = "Enemy";
+            // 
             // StageDemo
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::GameDiCanh.Properties.Resources.D4PgrunWkAAHfiG;
+            this.Controls.Add(this.mechaBot);
             this.Controls.Add(this.player);
             this.Controls.Add(this.pictureBox1);
             this.DoubleBuffered = true;
@@ -76,6 +88,7 @@ namespace GameDiCanh
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.StageDemo_KeyUp);
             ((System.ComponentModel.ISupportInitialize)(this.player)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mechaBot)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -86,5 +99,6 @@ namespace GameDiCanh
         private System.Windows.Forms.PictureBox player;
         private System.Windows.Forms.Timer MyTimer;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox mechaBot;
     }
 }

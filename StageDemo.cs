@@ -11,22 +11,17 @@ using System.Windows.Forms;
 namespace GameDiCanh
 {
     public partial class StageDemo : Form
-    {
-        bool goLeft, goRight, jumping, isGameOver, shooting;
+    { 
+        bool goLeft, goRight, jumping, isGameOver, shoot;
 
         int jumpSpeed = 20;
         int force;
         int playerSpeed = 7;
-        int bulletSpeed = 20;
 
         List<PictureBox> bulletList=new List<PictureBox>();
 
         Random rnd = new Random();
 
-        int horizontalSpeed = 5;
-        int verticalSpeed = 3;
-
-        int enemySpeed = 5;
         public StageDemo()
         {
             InitializeComponent();
@@ -41,9 +36,10 @@ namespace GameDiCanh
         {
             if (e.KeyCode == Keys.Right) { goRight = false; }
             if (e.KeyCode == Keys.Left) { goLeft = false; }
-            if (e.KeyCode == Keys.Space && isGameOver == false)
+            if (e.KeyCode == Keys.Space && isGameOver == false && shoot == true)
             {
                 SpawnBullet();
+                shoot = false;
             }
         }
 
@@ -65,7 +61,8 @@ namespace GameDiCanh
                     jumping = true;
                     force = jumpSpeed;
                 }
-            }   
+            }  
+            if(e.KeyCode == Keys.Space) { shoot = true; }
            
         }
 
@@ -94,21 +91,63 @@ namespace GameDiCanh
                 jumping = false;
             }
             #endregion player movement logic ends
-   
 
+
+            movShoot();
+
+
+            #region enemy movement
+            if (mechaBot.Top + mechaBot.Height >= this.Height - pictureBox1.Height)
+            {
+                mechaBot.Top = this.Height - pictureBox1.Height - mechaBot.Height;
+            }
+            // BOT collison Ground
+            // BOT JUMP
+            #endregion
+
+
+            #region bullet || player collison enemy
+            foreach(Control y in this.Controls)
+            foreach(Control x in this.Controls)
+                {
+                    if ((string)x.Tag == "Enemy")
+                        {
+                            if (y.Bounds.IntersectsWith(x.Bounds) && (string)y.Tag == "bullet")
+                            {
+                                x.Visible = false;
+                                y.Visible = false;
+                            }
+                            if (player.Bounds.IntersectsWith(x.Bounds))
+                            {
+                                player.Visible = false;
+                                MyTimer.Stop();
+                                MessageBox.Show("Game Over");
+                            }
+                        }
+                    // Player collison enemy bullet
+                    }
+            #endregion
         }
 
-        private void SpawnBullet()
+        public void SpawnBullet()
         {
             Bullet spawnBullet = new Bullet();
             spawnBullet.bulletLeft = player.Left;
-            spawnBullet.bulletTop = player.Top + player.Height/3;
+            spawnBullet.bulletTop = player.Top + player.Height/4;
             spawnBullet.MakeBullet(this);
         }
 
         private void RestartGame()
         {
             
+        }
+
+        private void movShoot()
+        {
+            if (shoot)
+                player.BackgroundImage = Properties.Resources._1;
+            else
+                player.BackgroundImage = Properties.Resources._0;
         }
     }
 }

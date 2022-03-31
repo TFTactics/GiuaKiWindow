@@ -31,7 +31,7 @@ namespace GameDiCanh
             bullet.Top = bulletTop;
             
             form.Controls.Add(bullet);
-
+            
 
             bulletTimer.Interval = speed;
             bulletTimer.Tick += new EventHandler(BulletTimerEvent);
@@ -48,7 +48,8 @@ namespace GameDiCanh
                 bulletTimer = null;
                 bullet = null;
             }
-        }
-        
+        }     
     }
+
+    //Enemy Bullet (Override)
 }
