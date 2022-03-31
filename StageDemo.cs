@@ -12,11 +12,16 @@ namespace GameDiCanh
 {
     public partial class StageDemo : Form
     {
-        bool goLeft, goRight, jumping, isGameOver;
+        bool goLeft, goRight, jumping, isGameOver, shooting;
 
         int jumpSpeed = 20;
         int force;
         int playerSpeed = 7;
+        int bulletSpeed = 20;
+
+        List<PictureBox> bulletList=new List<PictureBox>();
+
+        Random rnd = new Random();
 
         int horizontalSpeed = 5;
         int verticalSpeed = 3;
@@ -36,7 +41,15 @@ namespace GameDiCanh
         {
             if (e.KeyCode == Keys.Right) { goRight = false; }
             if (e.KeyCode == Keys.Left) { goLeft = false; }
+            if (e.KeyCode == Keys.Space && isGameOver == false)
+            {
+                SpawnBullet();
+            }
+        }
 
+
+        private void bullet1_Click(object sender, EventArgs e)
+        {
 
         }
 
@@ -52,22 +65,24 @@ namespace GameDiCanh
                     jumping = true;
                     force = jumpSpeed;
                 }
-            }
+            }   
            
         }
 
         private void MainGameTimerEvent(object sender, EventArgs e)
         {
-            if (goRight == true)
+
+            #region player movement logic starts
+            if (goRight == true && player.Right < 1280)
             {
                 player.Left += playerSpeed;
             }
-            if(goLeft == true)
+            if (goLeft == true && player.Left > 0)
             {
                 player.Left -= playerSpeed;
             }
 
-            if(jumping == true)
+            if (jumping == true)
             {
                 player.Top -= force;
                 force -= 1;
@@ -78,7 +93,17 @@ namespace GameDiCanh
                 player.Top = this.Height - pictureBox1.Height - player.Height;
                 jumping = false;
             }
-            
+            #endregion player movement logic ends
+   
+
+        }
+
+        private void SpawnBullet()
+        {
+            Bullet spawnBullet = new Bullet();
+            spawnBullet.bulletLeft = player.Left;
+            spawnBullet.bulletTop = player.Top + player.Height/3;
+            spawnBullet.MakeBullet(this);
         }
 
         private void RestartGame()

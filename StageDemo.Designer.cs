@@ -56,6 +56,7 @@ namespace GameDiCanh
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             resources.ApplyResources(this.pictureBox1, "pictureBox1");
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.TabStop = false;
@@ -66,8 +67,8 @@ namespace GameDiCanh
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::GameDiCanh.Properties.Resources.D4PgrunWkAAHfiG;
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.player);
+            this.Controls.Add(this.pictureBox1);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "StageDemo";

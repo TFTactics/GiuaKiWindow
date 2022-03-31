@@ -121,6 +121,9 @@
   <data name="6241ba3d056db" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\6241ba3d056db.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="D4PgrunWkAAHfiG" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\D4PgrunWkAAHfiG.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="6241b9c7143311" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\6241b9c7143311.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -136,7 +139,7 @@
   <data name="zyro-image (3)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\zyro-image (3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="D4PgrunWkAAHfiG" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\D4PgrunWkAAHfiG.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="RegAttack" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Metal slug\RegAttack.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

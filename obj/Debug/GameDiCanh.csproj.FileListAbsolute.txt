@@ -42,3 +42,15 @@ D:\MyProject\GiuaKiWindow\obj\Debug\GameDiCanh.csproj.GenerateResource.cache
 D:\MyProject\GiuaKiWindow\obj\Debug\GameDiCanh.csproj.CoreCompileInputs.cache
 D:\MyProject\GiuaKiWindow\obj\Debug\GameDiCanh.exe
 D:\MyProject\GiuaKiWindow\obj\Debug\GameDiCanh.pdb
+D:\GiuaKiWindow\bin\Debug\GameDiCanh.exe.config
+D:\GiuaKiWindow\bin\Debug\GameDiCanh.exe
+D:\GiuaKiWindow\bin\Debug\GameDiCanh.pdb
+D:\GiuaKiWindow\obj\Debug\GameDiCanh.csproj.AssemblyReference.cache
+D:\GiuaKiWindow\obj\Debug\GameDiCanh.csproj.SuggestedBindingRedirects.cache
+D:\GiuaKiWindow\obj\Debug\GameDiCanh.Menu.resources
+D:\GiuaKiWindow\obj\Debug\GameDiCanh.Properties.Resources.resources
+D:\GiuaKiWindow\obj\Debug\GameDiCanh.StageDemo.resources
+D:\GiuaKiWindow\obj\Debug\GameDiCanh.csproj.GenerateResource.cache
+D:\GiuaKiWindow\obj\Debug\GameDiCanh.csproj.CoreCompileInputs.cache
+D:\GiuaKiWindow\obj\Debug\GameDiCanh.exe
+D:\GiuaKiWindow\obj\Debug\GameDiCanh.pdb

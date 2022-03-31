@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Boss.cs" />
+    <Compile Include="Bullet.cs" />
     <Compile Include="Character.cs" />
     <Compile Include="Enemy.cs" />
     <Compile Include="GameObject.cs" />
@@ -117,6 +118,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\D4PgrunWkAAHfiG.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Metal slug\RegAttack.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
