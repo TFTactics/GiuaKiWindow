@@ -31,3 +31,14 @@ C:\Users\T\OneDrive\Máy tính\GiuaKiWindow\obj\Debug\GameDiCanh.pdb
 C:\Users\T\OneDrive\Máy tính\GiuaKiWindow\bin\Debug\GameDiCanh.exe.config
 C:\Users\T\OneDrive\Máy tính\GiuaKiWindow\bin\Debug\GameDiCanh.exe
 C:\Users\T\OneDrive\Máy tính\GiuaKiWindow\bin\Debug\GameDiCanh.pdb
+D:\MyProject\GiuaKiWindow\bin\Debug\GameDiCanh.exe.config
+D:\MyProject\GiuaKiWindow\bin\Debug\GameDiCanh.exe
+D:\MyProject\GiuaKiWindow\bin\Debug\GameDiCanh.pdb
+D:\MyProject\GiuaKiWindow\obj\Debug\GameDiCanh.csproj.AssemblyReference.cache
+D:\MyProject\GiuaKiWindow\obj\Debug\GameDiCanh.Menu.resources
+D:\MyProject\GiuaKiWindow\obj\Debug\GameDiCanh.Properties.Resources.resources
+D:\MyProject\GiuaKiWindow\obj\Debug\GameDiCanh.StageDemo.resources
+D:\MyProject\GiuaKiWindow\obj\Debug\GameDiCanh.csproj.GenerateResource.cache
+D:\MyProject\GiuaKiWindow\obj\Debug\GameDiCanh.csproj.CoreCompileInputs.cache
+D:\MyProject\GiuaKiWindow\obj\Debug\GameDiCanh.exe
+D:\MyProject\GiuaKiWindow\obj\Debug\GameDiCanh.pdb
