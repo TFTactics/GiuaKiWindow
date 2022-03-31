@@ -47,9 +47,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Boss.cs" />
-    <Compile Include="Button_WOC.cs">
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="Character.cs" />
     <Compile Include="Enemy.cs" />
     <Compile Include="GameObject.cs" />
@@ -114,6 +111,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\zyro-image %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Metal slug\PlayerWalking\0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\D4PgrunWkAAHfiG.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

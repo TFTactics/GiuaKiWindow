@@ -41,7 +41,7 @@ namespace GameDiCanh
             this.btnStart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(59)))), ((int)(((byte)(57)))));
             this.btnStart.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnStart.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnStart.Font = new System.Drawing.Font("Manaspace", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnStart.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(141)))), ((int)(((byte)(84)))));
             this.btnStart.Location = new System.Drawing.Point(206, 61);
             this.btnStart.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -57,7 +57,7 @@ namespace GameDiCanh
             // 
             this.btnSetting.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(59)))), ((int)(((byte)(57)))));
             this.btnSetting.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnSetting.Font = new System.Drawing.Font("Manaspace", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSetting.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSetting.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(141)))), ((int)(((byte)(84)))));
             this.btnSetting.Location = new System.Drawing.Point(206, 210);
             this.btnSetting.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -73,7 +73,7 @@ namespace GameDiCanh
             // 
             this.btnExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(59)))), ((int)(((byte)(57)))));
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnExit.Font = new System.Drawing.Font("Manaspace", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(141)))), ((int)(((byte)(84)))));
             this.btnExit.Location = new System.Drawing.Point(206, 290);
             this.btnExit.Name = "btnExit";
@@ -89,7 +89,7 @@ namespace GameDiCanh
             this.btnCon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(59)))), ((int)(((byte)(57)))));
             this.btnCon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnCon.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnCon.Font = new System.Drawing.Font("Manaspace", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCon.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCon.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(141)))), ((int)(((byte)(84)))));
             this.btnCon.Location = new System.Drawing.Point(206, 137);
             this.btnCon.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -113,6 +113,7 @@ namespace GameDiCanh
             this.Controls.Add(this.btnCon);
             this.Controls.Add(this.btnStart);
             this.Cursor = System.Windows.Forms.Cursors.Default;
+            this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));

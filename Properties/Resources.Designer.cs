@@ -63,6 +63,16 @@ namespace GameDiCanh.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _0 {
+            get {
+                object obj = ResourceManager.GetObject("0", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _6241b9c714331 {
             get {
                 object obj = ResourceManager.GetObject("6241b9c714331", resourceCulture);
@@ -96,6 +106,16 @@ namespace GameDiCanh.Properties {
         internal static System.Drawing.Bitmap btn1 {
             get {
                 object obj = ResourceManager.GetObject("btn1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap D4PgrunWkAAHfiG {
+            get {
+                object obj = ResourceManager.GetObject("D4PgrunWkAAHfiG", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
