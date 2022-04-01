@@ -14,12 +14,11 @@ namespace GameDiCanh
         public string direction = "Right";// hướng đạn
         public int bulletLeft;
         public int bulletTop;// vị trí đạn
-
+        public string tag = "bullet";
         public int timeLate = 20;// tg chờ
         public int speed = 20;// tốc độ đạn
         public PictureBox bullet = new PictureBox();
         private Timer bulletTimer = new Timer();
-
 
         public void MakeBullet(Form form)
         {
@@ -29,7 +28,7 @@ namespace GameDiCanh
             bullet.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             bullet.Name = "bullet";
             bullet.TabStop = false;
-            bullet.Tag = "bullet";
+            bullet.Tag = tag;
             bullet.Left = bulletLeft;
             bullet.Top = bulletTop;
             

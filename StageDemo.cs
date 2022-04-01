@@ -21,13 +21,15 @@ namespace GameDiCanh
         List<PictureBox> bulletList=new List<PictureBox>();
 
         Random rnd = new Random();
+        private Timer bulletBotTimer = new Timer();
+
 
         public StageDemo()
         {
             InitializeComponent();
             RestartGame();
+            
         }
-
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
@@ -139,7 +141,8 @@ namespace GameDiCanh
         public void SpawnBullet()
         {
             Bullet spawnBullet = new Bullet();
-            spawnBullet.bulletLeft = player.Left;
+
+            spawnBullet.bulletLeft = player.Left - 2;
             spawnBullet.bulletTop = player.Top + player.Height/4;
             spawnBullet.MakeBullet(this);
         }
@@ -155,10 +158,12 @@ namespace GameDiCanh
 
         private void movShoot()
         {
+            // tạo hiệu ảnh chuyển động khi player bắn đạn
             if (shoot)
                 player.BackgroundImage = Properties.Resources._1;
             else
                 player.BackgroundImage = Properties.Resources._0;
         }
+        
     }
 }
