@@ -11,13 +11,17 @@ namespace GameDiCanh
 {
     public class Enemy
     {
+        // Tạo thuộc tính cơ bản cho bot
         public int health;
         public int damage;
 
+        // Vị trí của bot
         public int enemyTop;
         public int enemyLeft;
-        private int enemySpeed = 2;
-        public PictureBox enemyBot = new PictureBox();
+
+        private int timeLate = 100;// tg chờ
+        private int enemySpeed = 5;// Tốc độ của bot
+        public PictureBox mechaBot = new PictureBox();
         private Timer mechaBotTimer = new Timer();
         private Form form;
 
@@ -33,36 +37,39 @@ namespace GameDiCanh
         }
         public virtual void MakeMechaBot()
         {
-            enemyBot.BackColor = System.Drawing.Color.Transparent;
-            enemyBot.Image = global::GameDiCanh.Properties.Resources.EnemyMechaRobot;
-            enemyBot.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            enemyBot.Name = "mechaBot";
-            enemyBot.TabStop = false;
-            enemyBot.Tag = "Enemy";
-            enemyBot.Left = enemyLeft;
-            enemyBot.Top = enemyTop;
-            enemyBot.Height = 102;
-            enemyBot.Width = 61;
+            // Khởi tạo bot
+            mechaBot.BackColor = System.Drawing.Color.Transparent;
+            mechaBot.Image = global::GameDiCanh.Properties.Resources.EnemyMechaRobot;
+            mechaBot.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            mechaBot.Name = "mechaBot";
+            mechaBot.TabStop = false;
+            mechaBot.Tag = "Enemy";
+            mechaBot.Left = enemyLeft;
+            mechaBot.Top = enemyTop;
+            mechaBot.Height = 102;
+            mechaBot.Width = 61;
+
+            // Add bot vào form
+            this.form.Controls.Add(mechaBot);
 
 
-            this.form.Controls.Add(enemyBot);
-
-
-            mechaBotTimer.Interval = enemySpeed;
+            // Set mechabotTimer
+            mechaBotTimer.Interval = timeLate;
             mechaBotTimer.Tick += new EventHandler(MechaBotTimerEvent);
             mechaBotTimer.Start();
         }
         private void MechaBotTimerEvent(object sender, EventArgs e)
         {
-            enemyBot.Left -= enemySpeed;
+            // Tạo sự kiện mechaBot cho bot tự di chuyển sang trái
+            mechaBot.Left -= enemySpeed;
 
-            if (enemyBot.Right<=0)
+            if (mechaBot.Right<=0)
             {
                 mechaBotTimer.Stop();
                 mechaBotTimer.Dispose();
-                enemyBot.Dispose();
+                mechaBot.Dispose();
                 mechaBotTimer = null;
-                enemyBot = null;
+                mechaBot = null;
             }    
         }
     }
