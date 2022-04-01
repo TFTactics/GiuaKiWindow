@@ -122,6 +122,7 @@ namespace GameDiCanh
                     {
                         if (y.Bounds.IntersectsWith(x.Bounds) && (string)y.Tag == "bullet")
                         {
+                            x.Tag = "deathEnemy";
                             x.Dispose();
                             y.Dispose();
                             RestartGame();

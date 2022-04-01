@@ -17,7 +17,6 @@ namespace GameDiCanh
         // Vị trí của bot
         public int enemyTop;
         public int enemyLeft;
-
         private int timeLate = 100;// tg chờ
         private int enemySpeed = 5;// Tốc độ của bot
         public PictureBox mechaBot = new PictureBox();
@@ -61,9 +60,13 @@ namespace GameDiCanh
             mechaBotTimer.Start();
 
             // Set thời gian để dịch bán đạn
-            bulletBotTimer.Interval = 1000;
-            bulletBotTimer.Tick += new EventHandler(BulletBotTimerEvent);
-            bulletBotTimer.Start();
+            if ((string)this.mechaBot.Tag == "Enemy")
+            {
+                bulletBotTimer.Interval = 1000;
+                bulletBotTimer.Tick += new EventHandler(BulletBotTimerEvent);
+                bulletBotTimer.Start();
+            }
+            
         }
         private void MechaBotTimerEvent(object sender, EventArgs e)
         {
@@ -82,6 +85,8 @@ namespace GameDiCanh
 
         private void BulletBotTimerEvent(object sender, EventArgs e)
         {
+            if ((string)mechaBot.Tag != "Enemy")
+                return;
             Bullet spawnBullet_enemy = new Bullet();
             // thay đổi tag để tránh địch bắn địch
             spawnBullet_enemy.tag = "bullet_of_enemy";
