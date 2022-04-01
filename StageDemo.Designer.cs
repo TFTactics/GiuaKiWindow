@@ -72,6 +72,7 @@ namespace GameDiCanh
             this.mechaBot.Name = "mechaBot";
             this.mechaBot.TabStop = false;
             this.mechaBot.Tag = "Enemy";
+            this.mechaBot.Click += new System.EventHandler(this.mechaBot_Click);
             // 
             // StageDemo
             // 

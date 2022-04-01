@@ -127,5 +127,8 @@
   <ItemGroup>
     <None Include="Resources\Metal slug\EnemyMechaRobot\EnemyMechaRobot.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Metal slug\EnemyZombieMacro\Zombie.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

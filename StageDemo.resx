@@ -126,7 +126,7 @@
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="player.Location" type="System.Drawing.Point, System.Drawing">
-    <value>141, 465</value>
+    <value>139, 487</value>
   </data>
   <data name="player.Size" type="System.Drawing.Size, System.Drawing">
     <value>66, 78</value>
@@ -160,10 +160,10 @@
     <value>NoControl</value>
   </data>
   <data name="pictureBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>-3, 540</value>
+    <value>-3, 571</value>
   </data>
   <data name="pictureBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1288, 182</value>
+    <value>1288, 151</value>
   </data>
   <data name="pictureBox1.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -181,13 +181,16 @@
     <value>2</value>
   </data>
   <data name="mechaBot.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
-    <value>None</value>
+    <value>Zoom</value>
+  </data>
+  <data name="mechaBot.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="mechaBot.Location" type="System.Drawing.Point, System.Drawing">
-    <value>937, 452</value>
+    <value>1166, 460</value>
   </data>
   <data name="mechaBot.Size" type="System.Drawing.Size, System.Drawing">
-    <value>200, 100</value>
+    <value>102, 61</value>
   </data>
   <data name="mechaBot.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>StretchImage</value>

@@ -11,11 +11,13 @@ namespace GameDiCanh
 {
     class Bullet
     {
+        public string direction = "Right";
         public int bulletLeft;
         public int bulletTop;
 
-        private int speed = 20;
-        private PictureBox bullet = new PictureBox();
+        public int timeLate = 20;
+        public int speed = 20;
+        public PictureBox bullet = new PictureBox();
         private Timer bulletTimer = new Timer();
 
 
@@ -33,21 +35,36 @@ namespace GameDiCanh
             form.Controls.Add(bullet);
             
 
-            bulletTimer.Interval = speed;
+            bulletTimer.Interval = timeLate;
             bulletTimer.Tick += new EventHandler(BulletTimerEvent);
             bulletTimer.Start();
         }
         private void BulletTimerEvent(object sender, EventArgs e)
         {
-            bullet.Left += speed;
-            if (bullet.Left > 1280)
+            if (direction == "Right")
             {
-                bulletTimer.Stop();
-                bulletTimer.Dispose();
-                bullet.Dispose();
-                bulletTimer = null;
-                bullet = null;
+                bullet.Left += speed;
+                if (bullet.Left > 1280)
+                {
+                    bulletTimer.Stop();
+                    bulletTimer.Dispose();
+                    bullet.Dispose();
+                    bulletTimer = null;
+                    bullet = null;
+                }
             }
+            if (direction == "Left")
+            {
+                bullet.Left -= speed;
+                if (bullet.Right <= 0)
+                {
+                    bulletTimer.Stop();
+                    bulletTimer.Dispose();
+                    bullet.Dispose();
+                    bulletTimer = null;
+                    bullet = null;
+                }
+            }    
         }     
     }
 

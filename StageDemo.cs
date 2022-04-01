@@ -25,6 +25,7 @@ namespace GameDiCanh
         public StageDemo()
         {
             InitializeComponent();
+            RestartGame();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -64,6 +65,11 @@ namespace GameDiCanh
             }  
             if(e.KeyCode == Keys.Space) { shoot = true; }
            
+        }
+
+        private void mechaBot_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void MainGameTimerEvent(object sender, EventArgs e)
@@ -107,25 +113,26 @@ namespace GameDiCanh
 
 
             #region bullet || player collison enemy
-            foreach(Control y in this.Controls)
-            foreach(Control x in this.Controls)
+            foreach (Control y in this.Controls)
+                foreach (Control x in this.Controls)
                 {
                     if ((string)x.Tag == "Enemy")
+                    {
+                        if (y.Bounds.IntersectsWith(x.Bounds) && (string)y.Tag == "bullet")
                         {
-                            if (y.Bounds.IntersectsWith(x.Bounds) && (string)y.Tag == "bullet")
-                            {
-                                x.Visible = false;
-                                y.Visible = false;
-                            }
-                            if (player.Bounds.IntersectsWith(x.Bounds))
-                            {
-                                player.Visible = false;
-                                MyTimer.Stop();
-                                MessageBox.Show("Game Over");
-                            }
+                            x.Dispose();
+                            y.Dispose();
+                            RestartGame();
                         }
-                    // Player collison enemy bullet
+                        if (player.Bounds.IntersectsWith(x.Bounds))
+                        {
+                            player.Visible = false;
+                            MyTimer.Stop();
+                            MessageBox.Show("Game Over");
+                        }
                     }
+                    // Player collison enemy bullet
+                }
             #endregion
         }
 
@@ -140,6 +147,10 @@ namespace GameDiCanh
         private void RestartGame()
         {
             
+            Enemy enemy = new Enemy(this);
+            enemy.enemyLeft = rnd.Next(1200,1280);
+            enemy.enemyTop = rnd.Next(460,470);
+            enemy.MakeMechaBot();
         }
 
         private void movShoot()
