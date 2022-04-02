@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="Bullet.cs" />
     <Compile Include="Enemy.cs" />
+    <Compile Include="GameManage.cs" />
     <Compile Include="Menu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,6 +79,7 @@
     <EmbeddedResource Include="StageDemo.resx">
       <DependentUpon>StageDemo.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="ClassDiagram1.cd" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

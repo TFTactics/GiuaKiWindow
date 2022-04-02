@@ -38,7 +38,7 @@ namespace GameDiCanh
         {
             if (e.KeyCode == Keys.Right) { goRight = false; }
             if (e.KeyCode == Keys.Left) { goLeft = false; }
-            if (e.KeyCode == Keys.Space && isGameOver == false && shoot == true)
+            if (e.KeyCode == Keys.Space && GameManage.isGameOver == false && shoot == true)
             {
                 SpawnBullet();
                 shoot = false;
@@ -73,6 +73,16 @@ namespace GameDiCanh
 
         }
 
+        private void StageDemo_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void StageDemo_Load_1(object sender, EventArgs e)
+        {
+
+        }
+
         private void MainGameTimerEvent(object sender, EventArgs e)
         {
 
@@ -99,19 +109,7 @@ namespace GameDiCanh
             }
             #endregion player movement logic ends
 
-
             movShoot();
-
-
-            #region enemy movement
-            if (mechaBot.Top + mechaBot.Height >= this.Height - pictureBox1.Height)
-            {
-                mechaBot.Top = this.Height - pictureBox1.Height - mechaBot.Height;
-            }
-            // BOT collison Ground
-            // BOT JUMP
-            #endregion
-
 
             #region bullet || player collison enemy
             foreach (Control y in this.Controls)
@@ -121,6 +119,7 @@ namespace GameDiCanh
                     {
                         if ((string)y.Tag == "bullet_of_enemy" && player.Bounds.IntersectsWith(y.Bounds))
                         {
+                            GameManage.isGameOver = true;
                             isGameOver = true;
                             player.Dispose();
                             isGameOver = true;

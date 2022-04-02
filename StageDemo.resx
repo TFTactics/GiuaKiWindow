@@ -151,7 +151,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;player.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>0</value>
   </data>
   <metadata name="MyTimer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
@@ -178,43 +178,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;pictureBox1.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <metadata name="mechaBot.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>False</value>
-  </metadata>
-  <data name="mechaBot.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="mechaBot.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="mechaBot.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1067, 292</value>
-  </data>
-  <data name="mechaBot.Size" type="System.Drawing.Size, System.Drawing">
-    <value>102, 61</value>
-  </data>
-  <data name="mechaBot.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>StretchImage</value>
-  </data>
-  <data name="mechaBot.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="mechaBot.WaitOnLoad" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;mechaBot.Name" xml:space="preserve">
-    <value>mechaBot</value>
-  </data>
-  <data name="&gt;&gt;mechaBot.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;mechaBot.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;mechaBot.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>

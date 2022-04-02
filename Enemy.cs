@@ -70,9 +70,12 @@ namespace GameDiCanh
         }
         private void MechaBotTimerEvent(object sender, EventArgs e)
         {
+            if (GameManage.isGameOver == true)
+            {
+                return;
+            }
             // Tạo sự kiện mechaBot cho bot tự di chuyển sang trái
             mechaBot.Left -= enemySpeed;
-
             if (mechaBot.Right<=0)
             {
                 mechaBotTimer.Stop();
@@ -85,7 +88,7 @@ namespace GameDiCanh
 
         private void BulletBotTimerEvent(object sender, EventArgs e)
         {
-            if ((string)mechaBot.Tag != "Enemy")
+            if (GameManage.isGameOver == true)
                 return;
             Bullet spawnBullet_enemy = new Bullet();
             // thay đổi tag để tránh địch bắn địch
