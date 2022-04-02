@@ -20,21 +20,28 @@ namespace GameDiCanh
         public PictureBox bullet = new PictureBox();
         private Timer bulletTimer = new Timer();
 
-        public void MakeBullet(Form form)
+        public void MakeBullet(Form form, string Flag)
         {
             // tạo PictureBox bullet
+            #region playerBullet
             bullet.BackColor = System.Drawing.Color.Transparent;
-            bullet.BackgroundImage = global::GameDiCanh.Properties.Resources.RegAttack;
             bullet.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             bullet.Name = "bullet";
             bullet.TabStop = false;
             bullet.Tag = tag;
             bullet.Left = bulletLeft;
             bullet.Top = bulletTop;
+            #endregion
+
+            #region set bullet
+            if (Flag == "enemyBullet")
+                bullet.BackgroundImage = Properties.Resources.MechaRobotAttack;
+            else
+                bullet.BackgroundImage = Properties.Resources.RegAttack;
+            #endregion
             
             // thêm bullet vào form
             form.Controls.Add(bullet);
-            
             // set bulletTimer
             bulletTimer.Interval = timeLate;
             bulletTimer.Tick += new EventHandler(BulletTimerEvent);
@@ -72,6 +79,5 @@ namespace GameDiCanh
             }    
         }     
     }
-
     //Enemy Bullet (Override)
 }

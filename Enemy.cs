@@ -17,11 +17,11 @@ namespace GameDiCanh
         // Vị trí của bot
         public int enemyTop;
         public int enemyLeft;
-        private int timeLate = 100;// tg chờ
+        private int timeLate = 200;// tg chờ
         private int enemySpeed = 5;// Tốc độ của bot
         public PictureBox mechaBot = new PictureBox();
         private Timer mechaBotTimer = new Timer();
-        private Timer bulletBotTimer = new Timer();
+        public Timer bulletBotTimer = new Timer();
         private Form form;
 
 
@@ -40,14 +40,14 @@ namespace GameDiCanh
             // Khởi tạo bot
             mechaBot.BackColor = System.Drawing.Color.Transparent;
             mechaBot.Image = global::GameDiCanh.Properties.Resources.EnemyMechaRobot;
-            mechaBot.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            mechaBot.SizeMode = PictureBoxSizeMode.StretchImage;
             mechaBot.Name = "mechaBot";
             mechaBot.TabStop = false;
             mechaBot.Tag = "Enemy";
             mechaBot.Left = enemyLeft;
             mechaBot.Top = enemyTop;
-            mechaBot.Height = 102;
-            mechaBot.Width = 61;
+            mechaBot.Height = 61;
+            mechaBot.Width = 102;
 
             // Add bot vào form
             this.form.Controls.Add(mechaBot);
@@ -62,7 +62,7 @@ namespace GameDiCanh
             // Set thời gian để dịch bán đạn
             if ((string)this.mechaBot.Tag == "Enemy")
             {
-                bulletBotTimer.Interval = 1000;
+                bulletBotTimer.Interval = 1500;
                 bulletBotTimer.Tick += new EventHandler(BulletBotTimerEvent);
                 bulletBotTimer.Start();
             }
@@ -93,7 +93,7 @@ namespace GameDiCanh
             spawnBullet_enemy.direction = "Left";
             spawnBullet_enemy.bulletLeft = mechaBot.Left;
             spawnBullet_enemy.bulletTop = mechaBot.Top + mechaBot.Height / 4;
-            spawnBullet_enemy.MakeBullet(this.form);
+            spawnBullet_enemy.MakeBullet(this.form, "enemyBullet");
         }
     }
 

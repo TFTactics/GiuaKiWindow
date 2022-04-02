@@ -21,7 +21,6 @@ namespace GameDiCanh
         List<PictureBox> bulletList=new List<PictureBox>();
 
         Random rnd = new Random();
-        private Timer bulletBotTimer = new Timer();
 
 
         public StageDemo()
@@ -120,6 +119,14 @@ namespace GameDiCanh
                 {
                     if ((string)x.Tag == "Enemy")
                     {
+                        if ((string)y.Tag == "bullet_of_enemy" && player.Bounds.IntersectsWith(y.Bounds))
+                        {
+                            isGameOver = true;
+                            player.Dispose();
+                            isGameOver = true;
+                            MyTimer.Dispose();
+                            MessageBox.Show("Game Over");
+                        }
                         if (y.Bounds.IntersectsWith(x.Bounds) && (string)y.Tag == "bullet")
                         {
                             x.Tag = "deathEnemy";
@@ -142,15 +149,13 @@ namespace GameDiCanh
         public void SpawnBullet()
         {
             Bullet spawnBullet = new Bullet();
-
             spawnBullet.bulletLeft = player.Left - 2;
             spawnBullet.bulletTop = player.Top + player.Height/4;
-            spawnBullet.MakeBullet(this);
+            spawnBullet.MakeBullet(this, "playerBullet");
         }
 
         private void RestartGame()
         {
-            
             Enemy enemy = new Enemy(this);
             enemy.enemyLeft = rnd.Next(1200,1280);
             enemy.enemyTop = rnd.Next(460,470);
