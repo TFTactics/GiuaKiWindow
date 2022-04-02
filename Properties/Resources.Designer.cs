@@ -173,6 +173,16 @@ namespace GameDiCanh.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Scientist {
+            get {
+                object obj = ResourceManager.GetObject("Scientist", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Zombie {
             get {
                 object obj = ResourceManager.GetObject("Zombie", resourceCulture);

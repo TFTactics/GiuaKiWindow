@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace GameDiCanh
 {
-    class GameManage
+    class GameManager
     {
         public static bool isGameOver = false;
-        public static int []heath_value;
     }
 }

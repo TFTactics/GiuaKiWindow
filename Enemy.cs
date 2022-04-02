@@ -24,6 +24,15 @@ namespace GameDiCanh
         public Timer bulletBotTimer = new Timer();
         private Form form;
 
+        public void rdEnemy()
+        {
+            Random rnd = new Random();
+            List<Image> myImages = new List<Image>();
+            myImages.Add(Properties.Resources.EnemyMechaRobot);
+            myImages.Add(Properties.Resources.Zombie);
+            myImages.Add(Properties.Resources.Scientist);
+            this.mechaBot.Image = myImages[rnd.Next(myImages.Count)];
+        }
 
         public Enemy()
         {
@@ -37,9 +46,9 @@ namespace GameDiCanh
         }
         public virtual void MakeMechaBot()
         {
+            rdEnemy();
             // Khởi tạo bot
             mechaBot.BackColor = System.Drawing.Color.Transparent;
-            mechaBot.Image = global::GameDiCanh.Properties.Resources.EnemyMechaRobot;
             mechaBot.SizeMode = PictureBoxSizeMode.StretchImage;
             mechaBot.Name = "mechaBot";
             mechaBot.TabStop = false;
@@ -70,7 +79,7 @@ namespace GameDiCanh
         }
         private void MechaBotTimerEvent(object sender, EventArgs e)
         {
-            if (GameManage.isGameOver == true)
+            if (GameManager.isGameOver == true)
             {
                 return;
             }
@@ -86,9 +95,10 @@ namespace GameDiCanh
             }
         }
 
+
         private void BulletBotTimerEvent(object sender, EventArgs e)
         {
-            if (GameManage.isGameOver == true)
+            if (GameManager.isGameOver == true)
                 return;
             Bullet spawnBullet_enemy = new Bullet();
             // thay đổi tag để tránh địch bắn địch

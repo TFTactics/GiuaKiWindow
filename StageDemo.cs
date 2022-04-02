@@ -12,13 +12,10 @@ namespace GameDiCanh
 {
     public partial class StageDemo : Form
     { 
-        bool goLeft, goRight, jumping, isGameOver, shoot;
-
+        bool goLeft, goRight, jumping, shoot;
         int jumpSpeed = 20;
         int force;
         int playerSpeed = 7;
-
-        List<PictureBox> bulletList=new List<PictureBox>();
 
         Random rnd = new Random();
 
@@ -38,7 +35,7 @@ namespace GameDiCanh
         {
             if (e.KeyCode == Keys.Right) { goRight = false; }
             if (e.KeyCode == Keys.Left) { goLeft = false; }
-            if (e.KeyCode == Keys.Space && GameManage.isGameOver == false && shoot == true)
+            if (e.KeyCode == Keys.Space && GameManager.isGameOver == false && shoot == true)
             {
                 SpawnBullet();
                 shoot = false;
@@ -119,11 +116,9 @@ namespace GameDiCanh
                     {
                         if ((string)y.Tag == "bullet_of_enemy" && player.Bounds.IntersectsWith(y.Bounds))
                         {
-                            GameManage.isGameOver = true;
-                            isGameOver = true;
+                            GameManager.isGameOver = true;
                             player.Dispose();
-                            isGameOver = true;
-                            MyTimer.Dispose();
+                            MyTimer.Stop();
                             MessageBox.Show("Game Over");
                         }
                         if (y.Bounds.IntersectsWith(x.Bounds) && (string)y.Tag == "bullet")
@@ -132,6 +127,7 @@ namespace GameDiCanh
                             x.Dispose();
                             y.Dispose();
                             RestartGame();
+                            
                         }
                         if (player.Bounds.IntersectsWith(x.Bounds))
                         {
@@ -159,8 +155,8 @@ namespace GameDiCanh
             enemy.enemyLeft = rnd.Next(1200,1280);
             enemy.enemyTop = rnd.Next(460,470);
             enemy.MakeMechaBot();
+            enemy.health = 3;
         }
-
         private void movShoot()
         {
             // tạo hiệu ảnh chuyển động khi player bắn đạn

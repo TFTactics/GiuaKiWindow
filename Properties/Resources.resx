@@ -118,43 +118,46 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="RegAttack" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Metal slug\RegAttack.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="6241ba3d056db" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\6241ba3d056db.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Zombie" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Metal slug\EnemyZombieMacro\Zombie.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="11" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Metal slug\PlayerCrouchShoot\1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="zyro-image (3)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\zyro-image (3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="6241b9c7143311" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\6241b9c7143311.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="btn1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\btn1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="D4PgrunWkAAHfiG" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\D4PgrunWkAAHfiG.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="MechaRobotAttack" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Metal slug\EnemyMechaRobot\MechaRobotAttack.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="6241b9c714331" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\6241b9c714331.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="EnemyMechaRobot" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Metal slug\EnemyMechaRobot\EnemyMechaRobot.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Zombie" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Metal slug\EnemyZombieMacro\Zombie.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Metal slug\PlayerIdle\1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="6241b9c7143311" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\6241b9c7143311.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="0" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Metal slug\PlayerWalking\0.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="MechaRobotAttack" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Metal slug\EnemyMechaRobot\MechaRobotAttack.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="11" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Metal slug\PlayerCrouchShoot\1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="btn1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btn1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Metal slug\PlayerIdle\1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="6241ba3d056db" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\6241ba3d056db.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EnemyMechaRobot" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Metal slug\EnemyMechaRobot\EnemyMechaRobot.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="zyro-image (3)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\zyro-image (3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="D4PgrunWkAAHfiG" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\D4PgrunWkAAHfiG.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RegAttack" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Metal slug\RegAttack.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Scientist" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Metal slug\EnemyScientist\Scientist.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -48,7 +48,7 @@
   <ItemGroup>
     <Compile Include="Bullet.cs" />
     <Compile Include="Enemy.cs" />
-    <Compile Include="GameManage.cs" />
+    <Compile Include="GameManager.cs" />
     <Compile Include="Menu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -134,6 +134,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Metal slug\EnemyMechaRobot\MechaRobotAttack.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Metal slug\EnemyScientist\Scientist.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

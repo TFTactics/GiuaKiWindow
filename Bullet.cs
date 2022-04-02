@@ -16,36 +16,29 @@ namespace GameDiCanh
         public int bulletTop;// vị trí đạn
         public string tag = "bullet";
         public int timeLate = 20;// tg chờ
-        public int speed = 20;// tốc độ đạn
+        public int speed = 18;// tốc độ đạn
         public PictureBox bullet = new PictureBox();
         private Timer bulletTimer = new Timer();
 
         public void MakeBullet(Form form, string Flag)
         {
-            // tạo PictureBox bullet
-            #region playerBullet
+            #region setBullet
             bullet.BackColor = System.Drawing.Color.Transparent;
             bullet.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            bullet.Name = "bullet";
-            bullet.TabStop = false;
             bullet.Tag = tag;
             bullet.Left = bulletLeft;
             bullet.Top = bulletTop;
-            #endregion
-
-            #region set bullet
             if (Flag == "enemyBullet")
                 bullet.BackgroundImage = Properties.Resources.MechaRobotAttack;
             else
                 bullet.BackgroundImage = Properties.Resources.RegAttack;
             #endregion
-            
-            // thêm bullet vào form
             form.Controls.Add(bullet);
-            // set bulletTimer
+            #region setBulletTimer
             bulletTimer.Interval = timeLate;
             bulletTimer.Tick += new EventHandler(BulletTimerEvent);
             bulletTimer.Start();
+            #endregion
         }
         private void BulletTimerEvent(object sender, EventArgs e)
         {
@@ -56,11 +49,8 @@ namespace GameDiCanh
                 bullet.Left += speed;
                 if (bullet.Left > 1280)
                 {
-                    bulletTimer.Stop();
                     bulletTimer.Dispose();
                     bullet.Dispose();
-                    bulletTimer = null;
-                    bullet = null;
                 }
             }
 
@@ -70,14 +60,10 @@ namespace GameDiCanh
                 bullet.Left -= speed;
                 if (bullet.Right <= 0)
                 {
-                    bulletTimer.Stop();
                     bulletTimer.Dispose();
                     bullet.Dispose();
-                    bulletTimer = null;
-                    bullet = null;
                 }
             }    
         }     
     }
-    //Enemy Bullet (Override)
 }

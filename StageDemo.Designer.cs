@@ -41,7 +41,7 @@ namespace GameDiCanh
             // player
             // 
             this.player.BackColor = System.Drawing.Color.Transparent;
-            this.player.BackgroundImage = global::GameDiCanh.Properties.Resources._0;
+            this.player.BackgroundImage = global::GameDiCanh.Properties.Resources.Scientist;
             resources.ApplyResources(this.player, "player");
             this.player.Name = "player";
             this.player.TabStop = false;
