@@ -126,7 +126,7 @@
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="player.Location" type="System.Drawing.Point, System.Drawing">
-    <value>139, 487</value>
+    <value>156, 487</value>
   </data>
   <data name="player.Size" type="System.Drawing.Size, System.Drawing">
     <value>66, 78</value>
@@ -151,7 +151,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;player.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <metadata name="MyTimer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
@@ -160,10 +160,10 @@
     <value>NoControl</value>
   </data>
   <data name="pictureBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>-3, 571</value>
+    <value>0, 565</value>
   </data>
   <data name="pictureBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1288, 151</value>
+    <value>1280, 155</value>
   </data>
   <data name="pictureBox1.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -178,7 +178,37 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;pictureBox1.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
+  </data>
+  <data name="txtScore.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="txtScore.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Cooper Black, 13.8pt</value>
+  </data>
+  <data name="txtScore.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1109, 9</value>
+  </data>
+  <data name="txtScore.Size" type="System.Drawing.Size, System.Drawing">
+    <value>104, 26</value>
+  </data>
+  <data name="txtScore.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="txtScore.Text" xml:space="preserve">
+    <value>Score: 0</value>
+  </data>
+  <data name="&gt;&gt;txtScore.Name" xml:space="preserve">
+    <value>txtScore</value>
+  </data>
+  <data name="&gt;&gt;txtScore.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtScore.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;txtScore.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>

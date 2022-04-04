@@ -12,9 +12,14 @@ namespace GameDiCanh
 {
     public partial class Menu : Form
     {
+        CheckBox NhacNen;
+        CheckBox NhacHieuUng;
+        Button Reset;
+        Button QuayLai;
         public Menu()
         {
             InitializeComponent();
+            createSetting();
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -33,28 +38,53 @@ namespace GameDiCanh
 
         private void btnStart_Click(object sender, EventArgs e)
         {
-            this.Hide();
             StageDemo stage0 = new StageDemo();
             stage0.Size = new Size(1280, 720); 
             stage0.ShowDialog();
+            this.Close();
         }
 
         public void Setting()
         {
-            CheckBox NhacNen = new CheckBox() 
+            NhacNen.Show();
+            NhacHieuUng.Show();
+            QuayLai.Show();
+            Reset.Show(); 
+            
+
+            QuayLai.Click += (s, e) =>
+            {
+                NhacHieuUng.Hide();
+                NhacNen.Hide();
+                QuayLai.Hide();
+                btnCon.Show();
+                btnStart.Show();
+                btnExit.Show();
+                btnSetting.Show();
+            };
+
+
+            
+        }
+
+        public void createSetting()
+        {
+            NhacNen = new CheckBox()
             {
                 Height = 50,
-                Width = 180,
+                Width = 250,
                 BackColor = Color.FromArgb(48, 59, 57),
                 ForeColor = Color.FromArgb(239, 141, 84),
                 FlatStyle = FlatStyle.Popup
             };
             NhacNen.Text = "SOUND TRACK";
+            NhacNen.Name = "cbMusic";
             NhacNen.Location = new Point(206, 60);
             NhacNen.Font = new Font("Manaspace", 14);
+            NhacNen.CheckedChanged += new System.EventHandler(this.cbMusic_CheckedChanged);
             this.Controls.Add(NhacNen);
-
-            CheckBox NhacHieuUng = new CheckBox()
+            NhacNen.Hide();
+            NhacHieuUng = new CheckBox()
             {
                 Height = 50,
                 Width = 100,
@@ -65,11 +95,15 @@ namespace GameDiCanh
 
             };
             NhacHieuUng.Text = "SFX";
-            NhacHieuUng.Location = new Point(400, 60);
+            NhacHieuUng.Name = "cbEffectMusic";
+            NhacHieuUng.Location = new Point(500, 60);
             NhacHieuUng.Font = new Font("Manaspace", 14);
+            NhacHieuUng.CheckedChanged += new System.EventHandler(this.cbEffectMusic_CheckedChanged);
             this.Controls.Add(NhacHieuUng);
-
-            Button QuayLai = new Button() { 
+            NhacHieuUng.Hide();
+            
+            QuayLai = new Button()
+            {
                 AutoSize = true,
                 Height = 50,
                 Width = 100,
@@ -81,8 +115,10 @@ namespace GameDiCanh
             QuayLai.Font = new Font("Manaspace", 14);
             QuayLai.Location = new Point(206, 150);
             this.Controls.Add(QuayLai);
+            QuayLai.Hide();
 
-            Button Reset = new Button() {
+            Reset = new Button()
+            {
                 AutoSize = true,
                 Height = 50,
                 Width = 100,
@@ -93,24 +129,33 @@ namespace GameDiCanh
             };
             Reset.Text = "RESET";
             Reset.Font = new Font("Manaspace", 14);
+            Reset.Name = "btnReset";
             Reset.Location = new Point(206, 210);
+            Reset.Click += new System.EventHandler(this.btnReset_Click);
             this.Controls.Add(Reset);
+            Reset.Hide();
+        }
 
-            QuayLai.Click += (s, e) =>
-            {
-                NhacHieuUng.Dispose();
-                NhacNen.Dispose();
-                QuayLai.Dispose();
-                btnCon.Show();
-                btnStart.Show();
-                btnExit.Show();
-                btnSetting.Show();
-            };
+        public void cbMusic_CheckedChanged(object sender, EventArgs e)
+        {
+            MessageBox.Show("Music");
+        }
+
+        public void cbEffectMusic_CheckedChanged(object sender, EventArgs e)
+        {
+            MessageBox.Show("Effect Music");
+        }
+
+        public void btnReset_Click(object sender, EventArgs e)
+        {
+            NhacNen.Checked = false;
+            NhacHieuUng.Checked = false;
         }
 
         private void btnExit_MouseEnter(object sender, EventArgs e)
         {
      
         }
+
     }
 }

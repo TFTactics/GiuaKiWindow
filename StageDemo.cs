@@ -16,6 +16,7 @@ namespace GameDiCanh
         int jumpSpeed = 20;
         int force;
         int playerSpeed = 7;
+        int score;
 
         Random rnd = new Random();
 
@@ -82,6 +83,7 @@ namespace GameDiCanh
 
         private void MainGameTimerEvent(object sender, EventArgs e)
         {
+            txtScore.Text = "Score: " + score.ToString();
 
             #region player movement logic starts
             if (goRight == true && player.Right < 1280)
@@ -116,29 +118,30 @@ namespace GameDiCanh
                     {
                         if ((string)y.Tag == "bullet_of_enemy" && player.Bounds.IntersectsWith(y.Bounds))
                         {
-                            GameManager.isGameOver = true;
-                            player.Dispose();
-                            MyTimer.Stop();
-                            MessageBox.Show("Game Over");
+                            gameOver();
                         }
                         if (y.Bounds.IntersectsWith(x.Bounds) && (string)y.Tag == "bullet")
                         {
                             x.Tag = "deathEnemy";
                             x.Dispose();
                             y.Dispose();
-                            RestartGame();
+                            score += 1;
+                            CreateNewEnemy();
                             
                         }
                         if (player.Bounds.IntersectsWith(x.Bounds))
                         {
-                            player.Visible = false;
-                            MyTimer.Stop();
-                            MessageBox.Show("Game Over");
+                            gameOver();
                         }
                     }
                     // Player collison enemy bullet
                 }
             #endregion
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
 
         public void SpawnBullet()
@@ -149,13 +152,25 @@ namespace GameDiCanh
             spawnBullet.MakeBullet(this, "playerBullet");
         }
 
-        private void RestartGame()
+        private void CreateNewEnemy()
         {
             Enemy enemy = new Enemy(this);
-            enemy.enemyLeft = rnd.Next(1200,1280);
-            enemy.enemyTop = rnd.Next(460,470);
+            enemy.enemyLeft = rnd.Next(1200, 1280);
+            enemy.enemyTop = rnd.Next(460, 470);
             enemy.MakeMechaBot();
             enemy.health = 3;
+        }
+
+        private void RestartGame()
+        {
+            score = 0;
+            CreateNewEnemy();
+            player.Top = 565;
+            player.Left = 200;
+            player.Show();
+            MyTimer.Start();
+
+            txtScore.Text = "Score: " + score.ToString();   
         }
         private void movShoot()
         {
@@ -164,6 +179,23 @@ namespace GameDiCanh
                 player.BackgroundImage = Properties.Resources._1;
             else
                 player.BackgroundImage = Properties.Resources._0;
+        }
+
+        private void gameOver()
+        {
+            GameManager.isGameOver = true;
+            player.Hide();
+            MyTimer.Stop();
+            DialogResult result = MessageBox.Show("Game Over","Continue ???", MessageBoxButtons.YesNo);
+            if (result == DialogResult.Yes)
+            {
+                GameManager.isGameOver = false;
+                RestartGame();
+            }
+            else
+            {
+                this.Close();
+            }
         }
         
     }

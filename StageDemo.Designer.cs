@@ -34,6 +34,7 @@ namespace GameDiCanh
             this.player = new System.Windows.Forms.PictureBox();
             this.MyTimer = new System.Windows.Forms.Timer(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.txtScore = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.player)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -62,11 +63,20 @@ namespace GameDiCanh
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Tag = "Ground";
             // 
+            // txtScore
+            // 
+            resources.ApplyResources(this.txtScore, "txtScore");
+            this.txtScore.BackColor = System.Drawing.Color.Transparent;
+            this.txtScore.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.txtScore.Name = "txtScore";
+            this.txtScore.Click += new System.EventHandler(this.label1_Click);
+            // 
             // StageDemo
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::GameDiCanh.Properties.Resources.D4PgrunWkAAHfiG;
+            this.Controls.Add(this.txtScore);
             this.Controls.Add(this.player);
             this.Controls.Add(this.pictureBox1);
             this.DoubleBuffered = true;
@@ -87,5 +97,6 @@ namespace GameDiCanh
         private System.Windows.Forms.PictureBox player;
         private System.Windows.Forms.Timer MyTimer;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label txtScore;
     }
 }
