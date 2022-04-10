@@ -138,5 +138,23 @@
   <ItemGroup>
     <None Include="Resources\Metal slug\EnemyScientist\Scientist.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\standing.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\moving.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stading_rotate.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\moving_rotate.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\jump_rotate.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\jump.gif" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

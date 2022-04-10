@@ -42,12 +42,10 @@ namespace GameDiCanh
             // player
             // 
             this.player.BackColor = System.Drawing.Color.Transparent;
-            this.player.BackgroundImage = global::GameDiCanh.Properties.Resources.Scientist;
             resources.ApplyResources(this.player, "player");
             this.player.Name = "player";
             this.player.TabStop = false;
             this.player.Tag = "Player";
-            this.player.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // MyTimer
             // 
@@ -69,20 +67,17 @@ namespace GameDiCanh
             this.txtScore.BackColor = System.Drawing.Color.Transparent;
             this.txtScore.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.txtScore.Name = "txtScore";
-            this.txtScore.Click += new System.EventHandler(this.label1_Click);
             // 
             // StageDemo
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::GameDiCanh.Properties.Resources.D4PgrunWkAAHfiG;
             this.Controls.Add(this.txtScore);
             this.Controls.Add(this.player);
             this.Controls.Add(this.pictureBox1);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "StageDemo";
-            this.Load += new System.EventHandler(this.StageDemo_Load_1);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.StageDemo_KeyDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.StageDemo_KeyUp);
             ((System.ComponentModel.ISupportInitialize)(this.player)).EndInit();

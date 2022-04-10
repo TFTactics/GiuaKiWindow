@@ -11,31 +11,42 @@ using System.Windows.Forms;
 namespace GameDiCanh
 {
     public partial class StageDemo : Form
-    { 
-        bool goLeft, goRight, jumping, shoot;
+    {
+        // goLeft: di chuyển sang trái, goRight: di chuyển sang phải
+        // jumping: đang nhảy, shoot: đang bắn, hold: đang đứng yên
+        // grounding: đang chạm đất, rotate: nhận vật đang xoay sang phải
+        bool goLeft, goRight, jumping, shoot = false, hold = true, grounding = true, rotate = false;
         int jumpSpeed = 20;
         int force;
         int playerSpeed = 7;
         int score;
-
+        
         Random rnd = new Random();
 
 
         public StageDemo()
         {
             InitializeComponent();
-            RestartGame();
+            /* RestartGame();*/
             
-        }
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void StageDemo_KeyUp(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Right) { goRight = false; }
-            if (e.KeyCode == Keys.Left) { goLeft = false; }
+            if (e.KeyCode == Keys.Right&!hold && goLeft != true) 
+            { 
+                goRight = false;
+                hold = true;
+                // Đứng yên hướng về bên phải
+                player.Image = Properties.Resources.standing;
+            }
+            else if (e.KeyCode == Keys.Left&!hold && goRight != true) 
+            { 
+                goLeft = false;
+                hold = true;
+                // Đứng yên hướng về bên trái
+                player.Image = Properties.Resources.standing_rotate;
+            }
             if (e.KeyCode == Keys.Space && GameManager.isGameOver == false && shoot == true)
             {
                 SpawnBullet();
@@ -43,42 +54,49 @@ namespace GameDiCanh
             }
         }
 
-
-        private void bullet1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void StageDemo_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Right) { goRight = true; }
-            if (e.KeyCode == Keys.Left) { goLeft = true; }
+            if (e.KeyCode == Keys.Right & hold && goLeft != true)
+            {
+                goRight = true;
+                hold = false;
+                // Di chuyển sang phải
+                player.Image = Properties.Resources.moving;
+                rotate = false;
+            }
+
+            else if (e.KeyCode == Keys.Left & hold & goRight != true) 
+            { 
+                goLeft = true;
+                hold = false;
+                // Di chuyển sang trái
+                player.Image = Properties.Resources.moving_rotate;
+                rotate = true;
+            }
 
             if (jumping != true)
             {
-                if (e.KeyCode == Keys.Up)
+                if (e.KeyCode == Keys.Up & !rotate)
                 {
                     jumping = true;
                     force = jumpSpeed;
+                    hold = false;
+                    // Nhảy hướng về bên phải
+                    player.Image = Properties.Resources.jump;
+                    grounding = false;
+                }
+                if (e.KeyCode == Keys.Up & rotate)
+                {
+                    jumping = true;
+                    force = jumpSpeed;
+                    hold = false;
+                    // Nhảy hướng về bên phải
+                    player.Image = Properties.Resources.jump_rotate;
+                    grounding = false;
                 }
             }  
             if(e.KeyCode == Keys.Space) { shoot = true; }
            
-        }
-
-        private void mechaBot_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void StageDemo_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void StageDemo_Load_1(object sender, EventArgs e)
-        {
-
         }
 
         private void MainGameTimerEvent(object sender, EventArgs e)
@@ -103,12 +121,38 @@ namespace GameDiCanh
 
             if (player.Top + player.Height >= this.Height - pictureBox1.Height)
             {
+                // Set animation khi nhân vật tiếp đất
                 player.Top = this.Height - pictureBox1.Height - player.Height;
                 jumping = false;
+                // keep moving to right
+                if (!grounding & goRight)
+                {
+                    player.Image = Properties.Resources.moving;
+                    grounding = true;
+                }
+                // keep moving to left
+                if (!grounding & goLeft)
+                {
+                    player.Image = Properties.Resources.moving_rotate;
+                    grounding = true;
+                }
+                // hold to right
+                if (!grounding & !hold & !rotate)
+                {
+                    player.Image = Properties.Resources.standing;
+                    grounding = true;
+                    hold = true;
+                }
+                // hold to left
+                if (!grounding & rotate & !hold)
+                {
+                    player.Image = Properties.Resources.standing_rotate;
+                    grounding = true;
+                    hold = true;
+                }
             }
             #endregion player movement logic ends
 
-            movShoot();
 
             #region bullet || player collison enemy
             foreach (Control y in this.Controls)
@@ -127,7 +171,7 @@ namespace GameDiCanh
                             y.Dispose();
                             score += 1;
                             CreateNewEnemy();
-                            
+
                         }
                         if (player.Bounds.IntersectsWith(x.Bounds))
                         {
@@ -139,10 +183,7 @@ namespace GameDiCanh
             #endregion
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
+        
 
         public void SpawnBullet()
         {
@@ -161,6 +202,8 @@ namespace GameDiCanh
             enemy.health = 3;
         }
 
+        
+
         private void RestartGame()
         {
             score = 0;
@@ -171,14 +214,6 @@ namespace GameDiCanh
             MyTimer.Start();
 
             txtScore.Text = "Score: " + score.ToString();   
-        }
-        private void movShoot()
-        {
-            // tạo hiệu ảnh chuyển động khi player bắn đạn
-            if (shoot)
-                player.BackgroundImage = Properties.Resources._1;
-            else
-                player.BackgroundImage = Properties.Resources._0;
         }
 
         private void gameOver()
