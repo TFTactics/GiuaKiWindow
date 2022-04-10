@@ -156,5 +156,11 @@
   <ItemGroup>
     <None Include="Resources\jump.gif" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shoot_rotate.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shoot.gif" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

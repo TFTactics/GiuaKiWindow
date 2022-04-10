@@ -50,6 +50,7 @@ namespace GameDiCanh
             if (e.KeyCode == Keys.Space && GameManager.isGameOver == false && shoot == true)
             {
                 SpawnBullet();
+                player.Image = Properties.Resources.standing;
                 shoot = false;
             }
         }
@@ -95,7 +96,11 @@ namespace GameDiCanh
                     grounding = false;
                 }
             }  
-            if(e.KeyCode == Keys.Space) { shoot = true; }
+            if(e.KeyCode == Keys.Space) 
+            { 
+                shoot = true;
+                player.Image = Properties.Resources.shoot;
+            }
            
         }
 
